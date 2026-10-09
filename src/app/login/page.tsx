@@ -22,12 +22,12 @@ export default async function LoginPage({
 
   return (
     <AuthShell
-      title="Log in"
-      subtitle="Enter the email and password you registered with."
+      title="Welcome back"
+      subtitle="Log in with the email and password you registered with."
       footer={
         <>
           New here?{" "}
-          <Link href={registerHref} className="font-medium text-blue-700 hover:underline">
+          <Link href={registerHref} className="font-semibold text-blue-600 hover:text-blue-700 hover:underline dark:text-blue-400">
             Create an account
           </Link>
         </>

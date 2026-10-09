@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { signUp } from "@/lib/auth-client";
-import { FormError, FormField, SubmitButton } from "./form-field";
+import { FormError, FormField, PasswordField, SubmitButton } from "./form-field";
 
 export function RegisterForm({ redirectTo }: { redirectTo: string }) {
   const router = useRouter();
@@ -47,19 +47,17 @@ export function RegisterForm({ redirectTo }: { redirectTo: string }) {
       <FormError message={error} />
       <FormField label="Full name" name="name" autoComplete="name" required />
       <FormField label="Email" name="email" type="email" autoComplete="email" required />
-      <FormField
+      <PasswordField
         label="Password"
         name="password"
-        type="password"
         autoComplete="new-password"
         minLength={8}
         placeholder="At least 8 characters"
         required
       />
-      <FormField
+      <PasswordField
         label="Confirm password"
         name="confirmPassword"
-        type="password"
         autoComplete="new-password"
         minLength={8}
         required
